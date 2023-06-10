@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Calculator using javascript</title>
+</head>
+
+<body class="bg-zinc-400">
+    <main>
+        <!-- bg-[#3a4452] -->
+        <section class="flex items-center justify-center mx-30 my-30 mt-24">
+            <div class=" bg-[#3a4452] rounded-2xl p-10 mt-16">
+                <input class="w-80 p-7  rounded-md  text-right text-5xl outline-none  text-cyan-500 bg-slate-900"
+                    type="text" name="display" id="MyResult">
+                <div class="grid grid-cols-4 gap-4 mt-8 mb-3 " id="btnname">
+                    <button
+                        class="rounded-lg text-xl text-[#33ffd8] border border-2 border-slate-600 outline-none bg-[#3a4452] shadow-lg shadow-slate-500 w-16 h-16 cursor-pointer "
+                        onclick="deleteme('AC')">AC</button>
+                    <button
+                        class="rounded-lg text-xl text-[#33ffd8] border border-2 border-slate-600 outline-none bg-[#3a4452] shadow-lg shadow-slate-500 w-16 h-16 cursor-pointer "
+                        onclick="deletelastone('DE')">DE</button>
+                    <button
+                        class="rounded-lg text-xl text-[#33ffd8] border border-2 border-slate-600  outline-none bg-[#3a4452] shadow-lg shadow-slate-500  w-16 h-16 cursor-pointer"
+                        onclick="calculator('.')">.</button>
+                    <button
+                        class="rounded-lg text-xl text-[#33ffd8] border border-2 border-slate-600  outline-none bg-[#3a4452] shadow-lg shadow-slate-500  w-16 h-16 cursor-pointer"
+                        onclick="calculator('/')">/</button>
+                </div>
+                <div class="grid grid-cols-4 gap-4 mb-3 ">
+                    <button
+                        class="rounded-lg text-xl  text-white border border-2 border-slate-600 outline-none bg-[#3a4452] shadow-lg shadow-slate-500  w-16 h-16 cursor-pointer"
+                        onclick="calculator('7')">7</button>
+                    <button
+                        class="rounded-lg text-xl text-white border border-2 border-slate-600 outline-none bg-[#3a4452] shadow-lg shadow-slate-500 w-16 h-16 cursor-pointer btn-sel"
+                        onclick="calculator('8')">8</button>
+                    <button
+                        class="rounded-lg text-xl text-white border border-2 border-slate-600 outline-none  bg-[#3a4452] shadow-lg shadow-slate-500 w-16 h-16 cursor-pointer btn-sel"
+                        onclick="calculator('9')">9</button>
+                    <button
+                        class="rounded-lg text-xl text-[#33ffd8] border border-2 border-slate-600 outline-none bg-[#3a4452] shadow-lg shadow-slate-500 w-16 h-16 cursor-pointer btn-sel"
+                        onclick="calculator('*')">*</button>
+                </div>
+                <div class="grid grid-cols-4 gap-4 mb-3 ">
+                    <button
+                        class="rounded-lg text-xl  border border-2 border-slate-600 outline-none bg-[#3a4452] shadow-lg shadow-slate-500  w-16 h-16 text-white cursor-pointer"
+                        onclick="calculator('4')">4</button>
+                    <button
+                        class="rounded-lg text-xl  border border-2 border-slate-600 outline-none bg-[#3a4452] shadow-lg shadow-slate-500 w-16 h-16 text-white cursor-pointer"
+                        onclick="calculator('5')">5</button>
+                    <button
+                        class="rounded-lg text-xl text-white  border border-2 border-slate-600 outline-none bg-[#3a4452] shadow-lg shadow-slate-500 w-16 h-16 cursor-pointer"
+                        onclick="calculator('6')">6</button>
+                    <button
+                        class="rounded-lg text-xl   border border-2 border-slate-600 outline-none bg-[#3a4452] shadow-lg shadow-slate-500  w-16 h-16 cursor-pointer text-[#33ffd8]"
+                        onclick="calculator('-')">-</button>
+                </div>
+                <div class="grid grid-cols-4 gap-4 mb-3 ">
+                    <button
+                        class="rounded-lg text-xl text-white border border-2 border-slate-600 outline-none bg-[#3a4452] shadow-lg shadow-slate-500 w-16 h-16 cursor-pointer"
+                        onclick="calculator('1')">1</button>
+                    <button
+                        class="rounded-lg text-xl  text-white border border-2 border-slate-600 outline-none bg-[#3a4452] shadow-lg shadow-slate-500  w-16 h-16 cursor-pointer"
+                        onclick="calculator('2')">2</button>
+                    <button
+                        class="rounded-lg text-xl text-white  border border-2 border-slate-600  outline-none bg-[#3a4452] shadow-lg shadow-slate-500  w-16 h-16 cursor-pointer"
+                        onclick="calculator('3')">3</button>
+                    <button
+                        class="rounded-lg text-xl text-[#33ffd8] border border-2 border-slate-600 outline-none bg-[#3a4452] shadow-lg shadow-slate-500 w-16 h-16 cursor-pointer"
+                        onclick="calculator('+')">+</button>
+                </div>
+                <div class="grid grid-cols-4 mb-3 gap-4">
+                    <button class="rounded-lg text-xl text-white border border-2
+                            border-slate-600  
+                             outline-none bg-[#3a4452] shadow-lg shadow-slate-500 w-16 h-16 cursor-pointer"
+                        onclick="calculator('00')">00</button>
+                    <button
+                        class="rounded-lg text-xl  text-white  border border-2
+                            border-slate-600  outline-none bg-[#3a4452] shadow-lg shadow-slate-500 w-16 h-16 cursor-pointer "
+                        onclick="calculator('0')">0</button>
+                    <div class="grid col-span-2"> <button
+                            class="rounded-lg text-xl  text-[#33ffd8]  border border-2 border-slate-600 outline-none bg-[#3a4452] shadow-lg shadow-slate-500 mx-1.5  h-16  cursor-pointer "
+                            onclick="answer()">=
+                        </button></div>
+                </div>
+
+            </div>
+
+        </section>
+    </main>
+    <script src="calculator.js"></script>
+</body>
+
+</html>
