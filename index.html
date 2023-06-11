@@ -15,14 +15,17 @@
         <!-- bg-[#3a4452] -->
         <section class="flex items-center justify-center mx-30 my-30 mt-24">
             <div class=" bg-[#3a4452] rounded-2xl p-10 mt-16">
-                <input class="w-80 p-7  rounded-md  text-right text-5xl outline-none  text-cyan-500 bg-slate-900"
-                    type="text" name="display" id="MyResult">
+                <input class="w-80 p-7  rounded-md  text-right text-5xl outline-none  text-cyan-500 bg-slate-900 "
+                    type="text" name="display" id="MyResult" readonly>
+                <!-- <div class="w-80 h-28 p-7  rounded-md  text-right text-5xl outline-none  text-cyan-500 bg-slate-900"
+                    id="MyResult"> -->
+                <!-- </div> -->
                 <div class="grid grid-cols-4 gap-4 mt-8 mb-3 " id="btnname">
                     <button
                         class="rounded-lg text-xl text-[#33ffd8] border border-2 border-slate-600 outline-none bg-[#3a4452] shadow-lg shadow-slate-500 w-16 h-16 cursor-pointer "
-                        onclick="deleteme('AC')">AC</button>
+                        onclick="deleteme('AC')" onkeydown="deleteme('AC')">AC</button>
                     <button
-                        class="rounded-lg text-xl text-[#33ffd8] border border-2 border-slate-600 outline-none bg-[#3a4452] shadow-lg shadow-slate-500 w-16 h-16 cursor-pointer "
+                        class="rounded-lg text-xl text-[#33ffd8] border border-2 border-slate-600 outline-none bg-[#3a4452] shadow-lg shadow-slate-500 w-16 h-16 cursor-pointer"
                         onclick="deletelastone('DE')">DE</button>
                     <button
                         class="rounded-lg text-xl text-[#33ffd8] border border-2 border-slate-600  outline-none bg-[#3a4452] shadow-lg shadow-slate-500  w-16 h-16 cursor-pointer"
@@ -83,7 +86,7 @@
                             border-slate-600  outline-none bg-[#3a4452] shadow-lg shadow-slate-500 w-16 h-16 cursor-pointer "
                         onclick="calculator('0')">0</button>
                     <div class="grid col-span-2"> <button
-                            class="rounded-lg text-xl  text-[#33ffd8]  border border-2 border-slate-600 outline-none bg-[#3a4452] shadow-lg shadow-slate-500 mx-1.5  h-16  cursor-pointer "
+                            class="rounded-lg text-xl  text-[#33ffd8]  border border-2 border-slate-600 outline-none bg-[#3a4452] shadow-lg shadow-slate-500 mx-1 mr-2  h-16  cursor-pointer "
                             onclick="answer()">=
                         </button></div>
                 </div>
